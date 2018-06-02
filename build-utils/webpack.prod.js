@@ -20,10 +20,11 @@ const config = {
             {
               loader: 'css-loader',
               options: {
-                modules: true,
+                modules: false,
                 importLoaders: 2,
                 camelCase: true,
                 sourceMap: true
+                // localIdentName : '[name]__[local]__[hash:base64:5]'
               }
             },
             {

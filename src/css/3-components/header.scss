@@ -1,0 +1,108 @@
+//Header Stylings
+
+
+.navbar-brand {
+  position: absolute;
+  top: 0;
+  background-color: $w;
+  padding: 10px;
+}
+
+.nav-link {
+  position: relative;
+  padding: 0 !important;
+  font-family: $sspro;
+  font-weight: 600;
+  text-transform: uppercase;
+  font-size: 14px;
+  letter-spacing: 0.92px;
+  overflow: hidden;
+
+  &,
+  &:hover,
+  &:focus {
+    color: rgba(0, 0, 0, 0.5);
+  }
+
+  span {
+    position: relative;
+    display: inline-block;
+    transition: all 0.3s ease;
+    font-weight: 700;
+
+    &::after {
+      content: attr(data-linktitle);
+      position: absolute;
+      top: 100%;
+      left: 0;
+      right: 0;
+    }
+  }
+
+  &:hover {
+    span {
+      transform: translateY(-100%);
+    }
+  }
+}
+
+.navbar {
+  z-index: 9000;
+  padding: 20px 40px;
+  background-color: $py;
+  transition: all 0.5s ease;
+
+  @media (min-width: $sm) {
+    padding: 20px 80px;
+  }
+
+  &.active {
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 0;
+    background-color: $w;
+    box-shadow: 0 0 10px 1px rgba(0, 0, 0, 0.1);
+  }
+}
+
+.navbar-toggler {
+  margin-left: auto;
+  border: none;
+}
+
+.nav-item {
+  margin-left: 10px;
+  padding: 0 10px;
+  opacity: 0.8;
+  transition: opacity 1s ease;
+
+  &.active {
+    opacity: 1;
+
+    .nav-link span {
+      transform: translateY(-100%);
+    }
+  }
+
+  &:last-child {
+    margin-left: 0;
+  }
+}
+
+.navbar-nav {
+  margin-left: auto;
+
+  @media (min-width: $sm) {
+    flex-direction: row;
+  }
+}
+
+.navbar-logo {
+  width: 50px;
+  height: auto;
+}
+
+.navmenu-wrapper {
+  margin-left: auto;
+}

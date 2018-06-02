@@ -1,14 +1,33 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 
-import styles from './header.scss';
+import logo from '../../../assets/img/logo.png';
+import NavLink from './nav-link/index';
 
 const Header = () => {
   return (
-    <header className={styles.wrapper}>
-      <Link to="/">
-        <h2>React Webpack</h2>
-      </Link>
+    <header>
+      <div className="navbar">
+        <Link to="/" className="navbar-brand">
+          <img className="navbar-logo" src={logo} alt="logo" />
+        </Link>
+        <div className="navmenu-wrapper">
+          <ul className="navbar-nav">
+            <li className="nav-item active">
+              <NavLink content="home" href="/" />
+            </li>
+            <li className="nav-item">
+              <NavLink content="about" href="/about" />
+            </li>
+            <li className="nav-item">
+              <NavLink content="products" href="/" />
+            </li>
+            <li className="nav-item">
+              <NavLink content="contact us" href="/" />
+            </li>
+          </ul>
+        </div>
+      </div>
     </header>
   );
 };

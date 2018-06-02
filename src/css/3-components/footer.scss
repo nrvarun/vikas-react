@@ -1,0 +1,59 @@
+//Footer Stylings
+
+.footer {
+  background-color: $b0;
+  padding: 10px;
+  display: flex;
+
+  @media (min-width: $sm) {
+    padding: 20px;
+  }
+
+
+  &__text {
+    color: $w;
+    font-size: 12px;
+    font-weight: 300;
+    margin: 0;
+    font-family: $sspro;
+
+    &.contact {
+      padding: 10px 0;
+      opacity: 0.3;
+
+      @media (min-width: $sm) {
+        padding: 0;
+      }
+    }
+  }
+}
+
+.footer-list {
+  // display: flex;
+  margin: 0;
+  padding: 0;
+  opacity: 0.3;
+  list-style-type: none;
+
+  @media (min-width: $sm) {
+    display: flex;
+  }
+
+  &__item {
+    // display: flex;
+    padding: 10px 0;
+    align-items: center;
+    justify-content: center;
+
+    @media (min-width: $sm) {
+      display: flex;
+      padding: 0 10px;
+      margin-bottom: 0;
+      border-right: 1px solid #acacac;
+    }
+
+    &:last-child {
+      border-right: 0;
+    }
+  }
+}

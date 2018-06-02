@@ -1,0 +1,71 @@
+.link {
+  &,
+  &:focus,
+  &:hover,
+  &:active {
+    color: $b0;
+    height: 34px;
+    font-size: 14px;
+    padding: 0 20px;
+    font-weight: 300;
+    line-height: 34px;
+    margin: 10px 20px;
+    position: relative;
+    font-family: $sspro;
+    display: inline-block;
+    text-transform: uppercase;
+  }
+
+  &::after,
+  &::before {
+    content: '';
+    width: 30%;
+    height: 2px;
+    opacity: 0.2;
+    background: $b0;
+    position: absolute;
+    transition: all 0.3s;
+    pointer-events: none;
+  }
+
+  &::before {
+    top: 0;
+    left: 0;
+    transform-origin: 0 0;
+    transform: rotate(90deg);
+  }
+
+  &::after {
+    right: 0;
+    bottom: 0;
+    transform: rotate(90deg);
+    transform-origin: 100% 0;
+  }
+
+  &:hover {
+    &::after,
+    &::before {
+      opacity: 1;
+      background-color: $py;
+    }
+
+    &::after {
+      right: 50%;
+      transform: rotate(0deg) translateX(50%);
+    }
+
+    &::before {
+      left: 50%;
+      transform: rotate(0deg) translateX(-50%);
+    }
+  }
+
+  &--small {
+    &,
+    &:hover,
+    &:active,
+    &:focus {
+      font-size: 12px;
+    }
+  }
+}

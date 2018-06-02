@@ -1,0 +1,75 @@
+//Headings
+
+.section-heading {
+  font-family: $osw;
+  font-weight: 500;
+  position: relative;
+  margin-bottom: 30px;
+  font-size: 20px;
+  text-transform: uppercase;
+  display: inline-block;
+
+  @media (min-width: $sm) {
+    font-size: 30px;
+  }
+
+  @media (min-width: $md) {
+    font-size: 40px;
+  }
+
+  &--light {
+    opacity: 0.1;
+  }
+
+  &--normal {
+    &::after {
+      display: none;
+    }
+
+    font-weight: 700;
+
+    @media (min-width: $sm) {
+      font-size: 25px;
+    }
+
+    @media (min-width: $md) {
+      font-size: 30px;
+    }
+  }
+
+  &::after {
+    position: absolute;
+    content: "";
+    left: 0;
+    bottom: -10px;
+    height: 4px;
+    width: 30%;
+    background-color: $py;
+  }
+
+  &--testimonials {
+    opacity: 0.3;
+
+    &::after {
+      background-color: $w;
+    }
+  }
+}
+
+.section-desc {
+  font-family: $sspro;
+  font-size: 14px;
+  color: $b0;
+  font-weight: 300;
+  line-height: 26px;
+
+  @media (min-width: $sm) {
+    font-size: 16px;
+    line-height: 28px;
+  }
+
+  @media (min-width: $md) {
+    font-size: 18px;
+    line-height: 34px;
+  }
+}

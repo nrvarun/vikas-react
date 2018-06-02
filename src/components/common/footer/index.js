@@ -1,10 +1,8 @@
 import React from 'react';
 
-import styles from './footer.scss';
-
 const Footer = () => {
   return (
-    <footer className={styles.wrapper}>
+    <footer>
       <p>Made with
         <span role="img" aria-label="heart">💖</span>
          by Varun
