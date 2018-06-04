@@ -1,17 +1,20 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+// import { Link } from 'react-router-dom';
 
 import Layout from './Layout';
+
+import Banner from './home/banner';
+import About from './home/about';
+import Products from './home/products';
+import Testimonials from './home/testimonials';
 
 const Home = () => {
   return (
     <Layout>
-      <section>
-        <p>Hey World of React and Webpack!</p>
-        <p>
-          <Link to="/about">Navigate to Dynamic Page</Link>
-        </p>
-      </section>
+      <Banner />
+      <About />
+      <Products />
+      <Testimonials />
     </Layout>
   );
 };

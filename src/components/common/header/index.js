@@ -12,7 +12,7 @@ const Header = () => {
           <img className="navbar-logo" src={logo} alt="logo" />
         </Link>
         <div className="navmenu-wrapper">
-          <ul className="navbar-nav">
+          <ul className="navbar-nav d-none d-md-flex">
             <li className="nav-item active">
               <NavLink content="home" href="/" />
             </li>

@@ -25,6 +25,8 @@ module.exports = {
     "react/jsx-filename-extension": [1, { "extensions": [".js", ".jsx"] }],
     "arrow-body-style": 0,
     "jsx-a11y/anchor-is-valid": [ "error", { "components": [ "Link" ], "specialLink": [ "to" ] } ],
-    "react/prop-types": [2, { ignore: ['children'] }]
+    "react/prop-types": [2, { ignore: ['children'] }],
+    "react/prefer-stateless-function": "off"
+    // "max-len": 0
   }
 }

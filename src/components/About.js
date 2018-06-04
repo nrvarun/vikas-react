@@ -1,15 +1,16 @@
 import React from 'react';
 
 import Layout from './Layout';
+import Banner from './about/banner';
+import About from './about/about';
 
-const About = () => {
+const AboutUs = () => {
   return (
     <Layout>
-      <section>
-        <p>About Page !!!</p>
-      </section>
+      <Banner />
+      <About />
     </Layout>
   );
 };
 
-export default About;
+export default AboutUs;

@@ -1,0 +1,30 @@
+.aboutus {
+  padding: 50px 20px;
+
+  @media (min-width: $sm) {
+    padding: 60px 40px;
+  }
+
+  @media (min-width: $md) {
+    padding: 80px 40px;
+  }
+
+  @media (min-width: $lg) {
+    padding: 100px 40px;
+  }
+
+  &__content {
+    @media (min-width: $sm) {
+      max-width: 500px;
+      margin: 0 auto;
+    }
+
+    @media (min-width: $md) {
+      max-width: 600px;
+    }
+
+    @media (min-width: $lg) {
+      max-width: 720px;
+    }
+  }
+}

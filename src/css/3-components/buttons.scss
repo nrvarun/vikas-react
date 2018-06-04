@@ -1,0 +1,30 @@
+//Button Modules
+
+.button {
+  border-top-left-radius: 31px;
+  border-bottom-left-radius: 31px;
+  border-top-right-radius: 31px;
+  border-bottom-right-radius: 31px;
+  padding: 15px 30px;
+  font-family: $osw;
+  font-weight: 300;
+  font-size: 12px;
+  border: 0;
+  outline: 0;
+  cursor: pointer;
+  opacity: 0.8;
+  text-transform: uppercase;
+  box-shadow: 0 0 51px rgba(255, 255, 255, 0.6);
+  transition: all 0.5s ease;
+
+  &:hover {
+    opacity: 1;
+    transform: translateY(-5px);
+  }
+
+  &--yellow {
+    color: $w;
+    background-color: $py;
+    box-shadow: 0 0 51px rgba(255, 202, 3, 0.6);
+  }
+}
