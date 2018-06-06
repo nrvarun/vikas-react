@@ -17,11 +17,16 @@
   font-size: 12px;
   letter-spacing: 0.92px;
   overflow: hidden;
+  opacity: 0.8;
 
   &,
   &:hover,
   &:focus {
-    color: rgba(0, 0, 0, 0.5);
+    color: rgba(0, 0, 0, 0.4);
+  }
+
+  &.disabled {
+    color: rgba(0, 0, 0, 0.4) !important;
   }
 
   span {
@@ -39,6 +44,12 @@
     }
   }
 
+  &.active {
+    color: rgba(0, 0, 0, 0.8);
+    opacity: 1;
+  }
+
+  &.active,
   &:hover {
     span {
       transform: translateY(-100%);
@@ -47,6 +58,11 @@
 }
 
 .navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
   z-index: 9000;
   padding: 20px 40px;
   background-color: transparent;
@@ -74,16 +90,7 @@
 .nav-item {
   margin-left: 10px;
   padding: 0 10px;
-  opacity: 0.8;
   transition: opacity 1s ease;
-
-  &.active {
-    opacity: 1;
-
-    .nav-link span {
-      transform: translateY(-100%);
-    }
-  }
 
   &:last-child {
     margin-left: 0;
@@ -99,11 +106,65 @@
 }
 
 .navbar-logo {
-  width: 35px;
+  width: 45px;
   height: auto;
 
   @media (min-width: $sm) {
     width: 50px;
+  }
+}
+
+.navmenu-toggle {
+  border: 0;
+  background-color: transparent;
+  color: transparent;
+  width: 30px;
+  padding: 0;
+  height: 30px;
+
+  &__line {
+    position: relative;
+    text-indent: -99999px;
+    display: flex;
+    height: 10px;
+    transition: all 0.5s ease;
+
+    &::after {
+      position: absolute;
+      content: '';
+      height: 2px;
+      width: 100%;
+      margin-bottom: 2px;
+      display: inline-block;
+      transition: transform 0.5s ease;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      background-color: $py;
+    }
+  }
+
+  &.active {
+    .navmenu-toggle__line {
+      &:nth-child(1) {
+        &::after {
+          transform: rotate(-42deg) translate(-7px, 11px);
+        }
+      }
+
+      &:nth-child(2) {
+        &::after {
+          transform: translateX(-10px) scale(0);
+          transform-origin: right;
+        }
+      }
+
+      &:nth-child(3) {
+        &::after {
+          transform: rotate(42deg) translate(-2px, -8px);
+        }
+      }
+    }
   }
 }
 

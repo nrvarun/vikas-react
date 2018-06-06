@@ -1,0 +1,35 @@
+//Sidenav stylings
+
+.sidenav {
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  opacity: 0;
+  z-index: 40;
+  display: flex;
+  position: fixed;
+  visibility: hidden;
+  align-items: center;
+  pointer-events: none;
+  background-color: $w;
+  justify-content: center;
+  transition: all 0.5s ease;
+  transform: translateY(-50px);
+
+  .nav-item {
+    display: none;
+  }
+
+  &.show {
+    pointer-events: all;
+    transform: translateY(0);
+    opacity: 1;
+    visibility: visible;
+
+    .nav-item {
+      display: block;
+    }
+  }
+
+}

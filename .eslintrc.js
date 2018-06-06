@@ -26,7 +26,8 @@ module.exports = {
     "arrow-body-style": 0,
     "jsx-a11y/anchor-is-valid": [ "error", { "components": [ "Link" ], "specialLink": [ "to" ] } ],
     "react/prop-types": [2, { ignore: ['children'] }],
-    "react/prefer-stateless-function": "off"
+    "react/prefer-stateless-function": "off",
+    "react/require-default-props" : 0
     // "max-len": 0
   }
 }
