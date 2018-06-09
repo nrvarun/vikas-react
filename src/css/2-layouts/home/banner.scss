@@ -3,6 +3,7 @@
 .banner-slider {
   margin-top: auto;
   margin-bottom: 50px;
+  z-index: 25;
 
   &__heading {
     font-family: $osw;
