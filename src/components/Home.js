@@ -8,15 +8,22 @@ import About from './home/about';
 import Products from './home/products';
 import Testimonials from './home/testimonials';
 
-const Home = () => {
-  return (
-    <Layout>
-      <Banner />
-      <About />
-      <Products />
-      <Testimonials />
-    </Layout>
-  );
-};
+class Home extends React.Component {
+  componentDidMount() {
+    console.log('Home component mounted');
+    window.scrollTo(0, 0);
+  }
+
+  render() {
+    return (
+      <Layout>
+        <Banner />
+        <About />
+        <Products />
+        <Testimonials />
+      </Layout>
+    );
+  }
+}
 
 export default Home;

@@ -1,5 +1,7 @@
 import React from 'react';
 
+import { NavLink } from 'react-router-dom';
+
 import SectionHeading from '../common/sectionHeading';
 import SectionDescription from '../common/sectionDesc';
 
@@ -11,8 +13,11 @@ const About = () => {
           <div className="col-sm-12 text-center aboutus__content">
             <SectionHeading heading="about us" />
             <SectionDescription
-              desc="Design is the method of putting form and content together. Design, just as art, has multiple definitions; there is no single definition. Design can be art. Design can be aesthetics. Design is so simple, that is why it is so complicated."
+              desc="VIKAS INDUSTRIES - a well known company for top quality products, established for the manufacture of various types of Lead Acid Batteries in a wide range, is situated at PUTTUR, Dakshina Kannada district, India."
             />
+            <NavLink className="button mt-2" to="/about">
+              read more
+            </NavLink>
           </div>
         </div>
       </div>

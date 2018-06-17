@@ -8,7 +8,7 @@ const ProductCard = (props) => {
   return (
     <div className={props.classes ? props.classes : 'product-card'}>
       <h3 className="product-card__heading">HI-Tech <span>Batteries</span></h3>
-      <p className="product-card__sub-heading">Jumbo Tubular</p>
+      <p className="product-card__sub-heading">{props.title}</p>
       <div className="product-card__img-wrapper">
         <img className="product-card__img" src={ProductImg} alt="Product" />
       </div>
@@ -23,6 +23,7 @@ export default ProductCard;
 
 ProductCard.propTypes = {
   classes: PropTypes.string,
+  title: PropTypes.string,
 };
 
 ProductCard.defaultProps = {

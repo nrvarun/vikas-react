@@ -1,10 +1,10 @@
 import React from 'react';
 
 import Layout from './Layout';
-import Banner from './about/banner';
-import About from './about/about';
+import Banner from './products/banner';
+import Content from './products/content';
 
-class AboutUs extends React.Component {
+class Products extends React.Component {
   componentDidMount() {
     window.scrollTo(0, 0);
   }
@@ -13,10 +13,10 @@ class AboutUs extends React.Component {
     return (
       <Layout>
         <Banner />
-        <About />
+        <Content />
       </Layout>
     );
   }
 }
 
-export default AboutUs;
+export default Products;

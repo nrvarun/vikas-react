@@ -14,7 +14,7 @@ const Footer = () => {
         <div className="footer__map">
           <MyMapComponent
             isMarkerShown={false}
-            googleMapURL="https://maps.googleapis.com/maps/api/js?v=3.exp"
+            googleMapURL="https://maps.googleapis.com/maps/api/js?key=AIzaSyCXy1BqkAoOR5OSCiO4nVvXHo4m9XZiRfs"
             loadingElement={<div style={{ height: '100%' }} />}
             containerElement={<div style={{ height: '350px' }} />}
             mapElement={<div style={{ height: '100%' }} />}

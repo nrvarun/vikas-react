@@ -16,16 +16,16 @@ class BannerSlider extends React.PureComponent {
     return (
       <Slider {...settings}>
         <Slide
-          content="Power for a "
-          highlight="Better Tomorrow"
+          content="Best Quality"
+          highlight="Best Price"
         />
         <Slide
-          content="Power for a "
-          highlight="Better Tomorrow"
+          content="Suitable for all types of"
+          highlight="Ups and Inverters"
         />
         <Slide
-          content="Power for a "
-          highlight="Better Tomorrow"
+          content="High Performance on all"
+          highlight="Solar applications"
         />
       </Slider>
     );

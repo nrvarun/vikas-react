@@ -13,8 +13,8 @@ const Products = () => {
           </div>
           <div className="col-sm-12">
             <div className="products-wrapper">
-              <ProductCard classes="product-card one active" />
-              <ProductCard classes="product-card" />
+              <ProductCard title="Single tubular" classes="product-card one active" />
+              <ProductCard title="Jumbo tubular" classes="product-card" />
             </div>
           </div>
         </div>

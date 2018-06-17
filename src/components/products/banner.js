@@ -13,7 +13,8 @@ const Banner = () => {
           </div>
           <div className="col-md-6 banner__content">
             <div className="banner-slider">
-              <h2 className="banner-heading text-left">About us</h2>
+              <h2 className="banner-heading text-left">products</h2>
+              <h4 className="banner-subheading">features</h4>
             </div>
           </div>
         </div>

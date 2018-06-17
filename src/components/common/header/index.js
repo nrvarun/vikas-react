@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link, NavLink } from 'react-router-dom';
 import PropTypes from 'prop-types';
-
+import SmoothScroll from 'smoothscroll-polyfill';
 import logo from '../../../assets/img/logo.png';
 // import NavLink from './nav-link/index';
 
@@ -26,9 +26,12 @@ class Header extends React.Component {
     };
 
     this.toggleSideNav = this.toggleSideNav.bind(this);
+    this.scrollToBottom = this.scrollToBottom.bind(this);
   }
 
   componentDidMount() {
+    // Kickoff Smooth scroll polyfill
+    SmoothScroll.polyfill();
     // 32 is the number of milliseconds to debounce
     // I picked this because it's approx 1 frame (ie: 16.7ms)
     // You'll want to modulate that to your taste.
@@ -41,8 +44,12 @@ class Header extends React.Component {
   }
 
   toggleSideNav = () => {
-    console.log('is it triggering');
     this.props.toggleMenu();
+  }
+
+  scrollToBottom = (e) => {
+    e.preventDefault();
+    document.querySelector('.footer').scrollIntoView({ behavior: 'smooth' });
   }
 
   handleScroll = () => {
@@ -86,14 +93,14 @@ class Header extends React.Component {
                 </NavLink>
               </li>
               <li className="nav-item">
-                <a className="nav-link disabled" href={'#'.toString()} onClick={(e) => { e.preventDefault(); }}>
+                <NavLink exact className="nav-link" activeClassName="active" to="/products">
                   <span data-linktitle="products">
                   products
                   </span>
-                </a>
+                </NavLink>
               </li>
               <li className="nav-item">
-                <a className="nav-link disabled" href={'#'.toString()} onClick={(e) => { e.preventDefault(); }}>
+                <a className="nav-link" href={'#'.toString()} onClick={this.scrollToBottom}>
                   <span data-linktitle="contact us">
                   contact us
                   </span>
