@@ -6,6 +6,7 @@ import MyMapComponent from './GoogleMap';
 
 import mailIcon from '../../../assets/img/mail.svg';
 import phoneIcon from '../../../assets/img/phone.svg';
+import MapIcon from '../../../assets/img/map.svg';
 
 const Footer = () => {
   return (
@@ -31,6 +32,10 @@ const Footer = () => {
             <div className="d-flex align-items-center">
               <img className="contact-icon" src={mailIcon} alt="mail icon" aria-label="mail icon" />
               <a className="contact-item text-underline" href="mailto:omvikasindustries@gmail.com">omvikasindustries@gmail.com</a>
+            </div>
+            <div className="d-flex align-items-center">
+              <img className="contact-icon" src={MapIcon} alt="map icon" aria-label="map icon" />
+              <a className="contact-item text-underline" rel="noopener noreferrer" target="_blank" href="https://goo.gl/maps/W6FSmUz3hAu">View on Google map</a>
             </div>
           </div>
         </div>

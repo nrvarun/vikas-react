@@ -45,6 +45,7 @@ const config = {
     new FriendlyErrorsWebpackPlugin()
   ],
   devServer: {
+    publicPath: '/',
     host: 'localhost',
     port: port,
     historyApiFallback: true,

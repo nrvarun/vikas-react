@@ -17,6 +17,16 @@
 .product-container {
   max-width: 950px;
   margin: 0 auto;
+
+  .row {
+    @media (min-width: $sm) {
+      margin-bottom: 80px !important;
+    }
+
+    @media (min-width: $md) {
+      margin-bottom: 120px !important;
+    }
+  }
 }
 
 .product-data-wrapper,
@@ -28,6 +38,7 @@
 }
 
 .product-img-wrapper {
+  align-items: center;
   justify-content: center;
 }
 
@@ -41,6 +52,8 @@
   color: $b0;
   line-height: 28px;
   font-weight: 300;
+  margin-top: 10px;
+  margin-bottom: 30px;
 
   span {
     font-weight: 600;

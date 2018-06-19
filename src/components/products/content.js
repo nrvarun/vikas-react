@@ -3,6 +3,8 @@ import React from 'react';
 import ProductHeading from './productHeading';
 import ProductDesc from './productDesc';
 
+import ProductImg from './productImg';
+
 const Content = () => {
   return (
     <section className="products">
@@ -23,15 +25,15 @@ const Content = () => {
             </p>
           </div>
           <div className="col-sm-5 product-img-wrapper text-center">
-            <img className="img-fluid" src="../assets/img/product-img.png" alt="product" />
+            <ProductImg img="./assets/img/product-img.png" />
           </div>
         </div>
-        <div className="row mb-5">
+        <div className="row mb-5 flex-column-reverse flex-sm-row">
           <div className="col-sm-5 product-img-wrapper text-center">
-            <img className="img-fluid" src="../assets/img/product-img.png" alt="product" />
+            <img className="img-fluid" src="./assets/img/product-img.png" alt="product" />
           </div>
           <div className="col-sm-7 text-left product-data-wrapper">
-            <ProductHeading heading="More Power" icon="../assets/img/product-icon.png" />
+            <ProductHeading heading="More Power" icon="./assets/img/product-icon.png" />
             <ProductDesc desc="Maximum electrical power is obtained due to their very precise design parameters. During the preparation of plates, absolute controls are exercised to get optimum results of electrochemical reactions. Deep discharge abilities of batteries are demonstrated due to the selection of special expanders in the mixing of the paste." />
           </div>
         </div>
@@ -41,12 +43,12 @@ const Content = () => {
             <ProductDesc desc="Hi Tech batteries give trouble-free performance with minimum maintenance for many long years." />
           </div>
           <div className="col-sm-5 product-img-wrapper text-center">
-            <img className="img-fluid" src="../assets/img/product-img.png" alt="product" />
+            <ProductImg img="./assets/img/product-img.png" />
           </div>
         </div>
-        <div className="row mb-5">
+        <div className="row mb-5 flex-column-reverse flex-sm-row">
           <div className="col-sm-5 product-img-wrapper text-center">
-            <img className="img-fluid" src="../assets/img/product-img.png" alt="product" />
+            <ProductImg img="./assets/img/product-img.png" />
           </div>
           <div className="col-sm-7 text-left product-data-wrapper">
             <ProductHeading heading="Quality Control" icon="../assets/img/product-icon.png" />
@@ -59,7 +61,7 @@ const Content = () => {
             <ProductDesc desc="Hi Tech Batteries are bundled with a warranty package of THREE years against all its manufacturing defects and premature failures, though the life expectancy of the batteries are much more than three years when maintained properly." />
           </div>
           <div className="col-sm-5 product-img-wrapper text-center">
-            <img className="img-fluid" src="../assets/img/product-img.png" alt="product" />
+            <ProductImg img="./assets/img/product-img.png" />
           </div>
         </div>
       </div>

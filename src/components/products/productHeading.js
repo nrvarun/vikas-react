@@ -7,7 +7,7 @@ import ProductIcon from '../../assets/img/product-icon.png';
 const ProductHeading = (props) => {
   return (
     <div className="d-flex align-items-center mb-2">
-      <img className="product-icon mr-2" src={ProductIcon} alt="" />
+      <img className="product-icon mr-3" src={ProductIcon} alt="" />
       <h2 className="product-heading">
         { props.heading }
       </h2>
