@@ -51,7 +51,8 @@ const config = {
     historyApiFallback: true,
     hot: true,
     open: true,
-    quiet: true
+    quiet: true,
+    contentbase: './'
   }
 };
 module.exports = config;
